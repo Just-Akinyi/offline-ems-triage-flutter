@@ -11,5 +11,5 @@ Designed specifically for emergency medical services (EMS) operating in high-str
 ## Technical Stack
 * **Framework:** Flutter (Dart)
 * **Local Persistence:** Hive (Lightweight, ultra-fast NoSQL storage)
-* **State Management:** Riverpod / Provider
+* **State Management:** Riverpod
 * **Network Monitoring:** Connectivity Plus
