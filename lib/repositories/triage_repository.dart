@@ -11,7 +11,6 @@ class TriageRepository {
   }
 
   Box get _box => Hive.box(_boxName);
-
   // Cache record locally immediately
   Future<void> saveLocally(TriageModel record) async {
     await _box.put(record.id, record.toMap());
