@@ -35,7 +35,7 @@ class _TriageFormScreenState extends ConsumerState<TriageFormScreen> with Widget
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
-      // Re-trigger connectivity validation using the public method
+     
       ref.read(triageProvider.notifier).initConnectivity(); 
     }
   }
@@ -81,7 +81,7 @@ class _TriageFormScreenState extends ConsumerState<TriageFormScreen> with Widget
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Cache indicator warning banner
+             
               if (triageState.cachedCount > 0)
                 Container(
                   padding: const EdgeInsets.all(12),

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import '../lib/models/triage_model.dart';
+import 'package:offline_ems_triage_flutter/models/triage_model.dart';
 
 void main() {
   group('TriageModel Validation Tests', () {
