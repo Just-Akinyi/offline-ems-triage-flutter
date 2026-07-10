@@ -78,10 +78,10 @@ test/
 ```
 ## 🚀 Getting It Running Locally
 
-Getting the application up and running on your machine only takes a minute:
+Follow the steps below to run the application locally.
 
 ### Prerequisites
-* You will need the **Flutter SDK** installed (anything above version `3.10.0` works perfectly).
+* You will need the **Flutter SDK** installed (Flutter SDK 3.10.0 or later).
 * An open mobile **emulator/simulator** or a real phone plugged into your computer with debugging enabled.
 
 ### Quick Start Commands
@@ -89,7 +89,7 @@ Open your terminal and run these commands:
 
 ```bash
 # 1. Grab the repository code
-git clone [https://github.com/YOUR_USERNAME/offline-ems-triage-flutter.git](https://github.com/YOUR_USERNAME/offline-ems-triage-flutter.git)
+git clone https://github.com/Just-Akinyi/offline-ems-triage-flutter.git
 cd offline-ems-triage-flutter
 
 
@@ -103,11 +103,14 @@ flutter run
 flutter test
 ```
 
-## 🧪 Testing the Sync
-
 ## 📺 Demo Video
 
 [![Watch the demo](https://img.youtube.com/vi/JM7h2V85gPk/maxresdefault.jpg)](https://youtube.com/shorts/JM7h2V85gPk?si=DOxtt1fzvCesPz9D)
+
+---
+
+## 🧪 Testing the Sync
+
 ### Scenario A: Go Offline
 1. Turn on **Airplane Mode** (badge changes to red **OFFLINE**).
 2. Fill out the form, set **Priority 1**, and tap **SUBMIT INTAKE**.
