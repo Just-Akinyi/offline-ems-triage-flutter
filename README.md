@@ -106,8 +106,8 @@ flutter test
 ## 🧪 Testing the Sync
 
 ## 📺 Demo Video
-https://github.com/Just-Akinyi/offline-ems-triage-flutter/assets/Triage.mp4
 
+[![Watch the demo](https://img.youtube.com/vi/JM7h2V85gPk/maxresdefault.jpg)](https://youtube.com/shorts/JM7h2V85gPk?si=DOxtt1fzvCesPz9D)
 ### Scenario A: Go Offline
 1. Turn on **Airplane Mode** (badge changes to red **OFFLINE**).
 2. Fill out the form, set **Priority 1**, and tap **SUBMIT INTAKE**.
