@@ -6,16 +6,39 @@ import '../providers/triage_provider.dart';
 
 class TriageFormScreen extends ConsumerStatefulWidget {
   const TriageFormScreen({super.key});
+
   @override
   ConsumerState<TriageFormScreen> createState() => _TriageFormScreenState();
 }
 
-class _TriageFormScreenState extends ConsumerState<TriageFormScreen> {
+class _TriageFormScreenState extends ConsumerState<TriageFormScreen> with WidgetsBindingObserver {
   final _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
   final _descController = TextEditingController();
   int _priorityLevel = 3;
   String _status = 'Pending';
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    _nameController.dispose();
+    _descController.dispose();
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      // Re-trigger connectivity validation using the public method
+      ref.read(triageProvider.notifier).initConnectivity(); 
+    }
+  }
 
   Color _getHazardColor(int priority) {
     if (priority == 1) return const Color(0xFFD32F2F);
