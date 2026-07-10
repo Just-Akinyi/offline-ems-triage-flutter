@@ -108,7 +108,6 @@ class _TriageFormScreenState extends ConsumerState<TriageFormScreen> with Widget
               ),
               const SizedBox(height: 16),
               
-              // Priority Selection Dropdown wrapped into clean interactive components
               AnimatedContainer(
                 duration: const Duration(milliseconds: 250),
                 padding: const EdgeInsets.all(8),
