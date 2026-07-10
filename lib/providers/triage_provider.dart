@@ -38,10 +38,12 @@ class TriageNotifier extends StateNotifier<TriageState> {
   late StreamSubscription<List<ConnectivityResult>> _connectivitySubscription;
 
   TriageNotifier(this._repo) : super(TriageState()) {
-    _initConnectivity();
+    // Call the newly named public method
+    initConnectivity();
   }
 
-  void _initConnectivity() {
+  // Changed from private _initConnectivity() to public initConnectivity()
+  void initConnectivity() {
     // Initial check
     Connectivity().checkConnectivity().then(_updateConnectionStatus);
     // Listen for changes
@@ -61,7 +63,6 @@ class TriageNotifier extends StateNotifier<TriageState> {
    
     await _repo.saveLocally(record);
     state = state.copyWith(cachedCount: _repo.getCachedRecords().length);
-
 
     bool success = await _repo.mockApiUpload(record, state.isOnline);
     if (success) {
